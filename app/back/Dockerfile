@@ -2,10 +2,10 @@
 FROM python:3.9
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /app/back
 
 # Copy the requirements.txt file into the container
-COPY ./requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/back/requirements.txt
 
 # Install Python libraries from requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
