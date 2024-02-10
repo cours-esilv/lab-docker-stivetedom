@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
 
 # Install Python libraries from requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the code into the container
 COPY . /app
@@ -18,3 +18,4 @@ EXPOSE 5000
 
 # Command to start the application
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
+
