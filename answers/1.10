@@ -1,0 +1,2 @@
+docker exec -it new_mean_container /bin/bash
+cat /etc/*release
