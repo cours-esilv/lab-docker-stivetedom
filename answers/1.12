@@ -1,3 +1,3 @@
 docker start new_back
-BACK_IP=$(docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' new_back)
-docker run -e WS_BACK_URL="http://${BACK_IP}:5000/" -p 8080:80 --name my_frontend_container stivetedom/my_frontend_image:latest
+docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' new_back
+docker run -e WS_BACK_URL=http://172.17.0.3:5000/ -p 8080:80 --name my_frontend_container my_frontend_image:latest
