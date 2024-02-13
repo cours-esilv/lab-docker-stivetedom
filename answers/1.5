@@ -1,2 +1,1 @@
-docker stop $(docker ps -a -q --filter ancestor=my_backend_image2 --format="{{.ID}}")
 docker run -p 5000:5000 -e CURRENT_ENVIRONMENT=development my_backend_image2
